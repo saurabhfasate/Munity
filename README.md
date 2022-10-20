@@ -1,6 +1,8 @@
 ## Batch - JEE with DevOps & Cloud(GCP) PT Aug 9th Batch1
 # Sprint 2 - Group A - Deploying **Munity** - A community-based social media application, to Google Kubernetes Engine
 
+[Repository for Sprint 1](https://github.com/manesnehal/group-a-sprint1)
+
 [Documentation for Munity](https://capgemini-my.sharepoint.com/:b:/p/snehal-shahaji_mane/EbtlYo74z_tCuRXVDinC6KUBKohWpKcO5f5tH-XVsYV5YQ?e=krHooq)
 ## Made using Spring Boot, Hibernate, and PostgreSQL
 
