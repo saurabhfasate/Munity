@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,11 +24,6 @@ import com.sprint1.CapGPlus.service.AdminService;
 public class AdminController {
 	@Autowired
 	private AdminService adminService;
-
-  @GetMapping("/")
-  private ResponseEntity<String> home() {
-    return new ResponseEntity<>("Munity", HttpStatus.OK);
-  }
 
 	// Admin Auth starts here
 	// 1. Login
@@ -67,7 +61,7 @@ public class AdminController {
 		return new ResponseEntity<>(adminService.editCommunityDetails(communityId, community), HttpStatus.OK);
 	}
 
-	@DeleteMapping("/community/{communityId}")
+	@DeleteMapping("/admin/community/{communityId}")
 	private ResponseEntity<Object> deleteCommunitybyCommunityId(@PathVariable int communityId)
 			throws CommunityNotFoundException {
 		return new ResponseEntity<>(adminService.deleteCommunitybyCommunityId(communityId), HttpStatus.OK);
