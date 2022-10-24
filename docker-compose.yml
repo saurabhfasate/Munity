@@ -1,0 +1,24 @@
+version: "2"
+
+services:
+  app:
+    image: "munity-compose-image"
+    build: 
+        context: .
+    ports:
+      - "8080:8080"
+    container_name: munity-compose-app
+    depends_on:
+      - db    
+    environment: 
+      - SPRING_DATASOURCE_USERNAME=munity-user
+      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/munity
+    
+  db:
+    image: "postgres:latest"
+    container_name: db-compose
+    environment:
+      - POSTGRES_USER=munity-user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=munity
